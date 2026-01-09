@@ -1,0 +1,386 @@
+/* --- CSS VARIABLES (Theme Colors) --- */
+:root {
+    --primary-pink: #FFC0CB;
+    --dark-pink: #FF69B4;
+    --mint-green: #D2F5E3;
+    --soft-yellow: #FFF9C4;
+    --choco-brown: #5D4037;
+    --text-color: #4E342E;
+    --white: #ffffff;
+    --shadow: 0 4px 15px rgba(0,0,0,0.1);
+    --nav-height: 70px;
+}
+
+/* --- RESET & GLOBAL STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: var(--text-color);
+    background-color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Fredoka One', cursive;
+}
+
+/* --- 1. NAVIGATION BAR --- */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--nav-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    z-index: 1000;
+    transition: all 0.4s ease-in-out;
+    background-color: transparent;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--choco-brown);
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+    transition: color 0.3s;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--choco-brown);
+    font-weight: 700;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s;
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--white);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Cart Button in Nav */
+.btn-nav {
+    background: var(--white);
+    color: var(--dark-pink) !important;
+    padding: 8px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-shadow: none !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cart-badge {
+    background-color: var(--dark-pink);
+    color: var(--white);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.btn-nav:hover {
+    transform: translateY(-2px);
+    background: var(--choco-brown);
+    color: var(--white) !important;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* --- SCROLLED STATE --- */
+nav.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: 60px;
+}
+
+nav.scrolled .logo { color: var(--dark-pink); text-shadow: none; }
+nav.scrolled .nav-links a { color: var(--choco-brown); text-shadow: none; }
+nav.scrolled .nav-links a::after { background-color: var(--dark-pink); }
+nav.scrolled .btn-nav { background-color: var(--dark-pink); color: var(--white) !important; }
+nav.scrolled .cart-badge { background-color: var(--white); color: var(--dark-pink); }
+
+/* --- 2. HERO SECTION --- */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, var(--primary-pink), var(--soft-yellow));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    color: var(--choco-brown);
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+.highlight-text {
+    color: var(--white);
+    text-shadow: 2px 2px 0px var(--dark-pink);
+}
+
+.hero-content p {
+    font-size: 1.6rem;
+    color: var(--choco-brown);
+    margin-bottom: 35px;
+    font-weight: 800;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 15px 45px;
+    background-color: var(--white);
+    color: var(--dark-pink);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px) scale(1.05);
+    background-color: var(--choco-brown);
+    color: var(--white);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* --- 3. FLAVORS (Cards) --- */
+.section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--choco-brown);
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 6px;
+    bottom: -10px;
+    left: 20%;
+    background: var(--primary-pink);
+    border-radius: 3px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.card-img {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-img {
+    transform: scale(1.1);
+}
+
+.card-info {
+    padding: 20px;
+    background: var(--white);
+    position: relative;
+    text-align: left;
+}
+
+.card-info h3 {
+    color: var(--dark-pink);
+    margin-bottom: 10px;
+}
+
+.price-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.price {
+    display: inline-block;
+    background: var(--mint-green);
+    color: var(--choco-brown);
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.add-to-cart {
+    background-color: var(--choco-brown);
+    color: var(--white);
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4px;
+}
+
+.add-to-cart:hover {
+    background-color: var(--dark-pink);
+}
+
+/* --- 4. SPECIALS SECTION --- */
+.highlight-bg {
+    background-color: var(--mint-green);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    border-radius: 50px;
+    margin: 50px 5%;
+    width: 90%;
+}
+
+.special-content {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.special-content h2 { color: var(--dark-pink); }
+.special-content h3 { font-size: 2.5rem; margin: 10px 0; }
+
+.btn-secondary {
+    padding: 12px 30px;
+    background: var(--choco-brown);
+    color: var(--white);
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+    width: auto;
+    height: auto;
+}
+
+.btn-secondary:hover {
+    background: var(--dark-pink);
+}
+
+.special-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid var(--white);
+    box-shadow: var(--shadow);
+}
+
+/* --- 5. ABOUT & FOOTER --- */
+.about-container {
+    background: var(--soft-yellow);
+    padding: 40px;
+    border-radius: 30px;
+}
+
+footer {
+    background: var(--choco-brown);
+    color: var(--white);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.socials {
+    margin: 20px 0;
+    font-weight: bold;
+    color: var(--primary-pink);
+}
+
+/* --- SCROLL REVEAL ANIMATIONS --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero-content h1 { font-size: 3rem; }
+    .hero-content p { font-size: 1.2rem; }
+    .highlight-bg { flex-direction: column-reverse; text-align: center; }
+    .special-content { text-align: center; }
+}
