@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Tooth 🍦 | Bakery & Ice Cream</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">Sweet Tooth 🍦</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#flavors">Flavors</a></li>
+            <li><a href="#specials">Specials</a></li>
+            <li><a href="#about">About</a></li>
+            <li>
+                <a href="#contact" class="btn-nav">
+                    Cart <span id="cart-count" class="cart-badge">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Scoops of Happiness in <span class="highlight-text">Every Bite</span></h1>
+            <p>Handcrafted ice cream and artisanal pastries made with love and sprinkles.</p>
+            <a href="#flavors" class="btn-primary">Explore Flavors</a>
+        </div>
+    </header>
+
+    <section id="flavors" class="section">
+        <h2 class="section-title reveal">Our Sweet Selections</h2>
+        <div class="card-container">
+            
+            <div class="card reveal">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="card-info">
+                    <h3>Berry Blast</h3>
+                    <p>Creamy strawberry swirl with fresh berry chunks.</p>
+                    <div class="price-action">
+                        <span class="price">₹250</span>
+                        <button class="add-to-cart" data-name="Berry Blast">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1557142046-c704a3adf364?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="card-info">
+                    <h3>Minty Chip</h3>
+                    <p>Refreshing mint green tea with dark chocolate chips.</p>
+                    <div class="price-action">
+                        <span class="price">₹250</span>
+                        <button class="add-to-cart" data-name="Minty Chip">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="card-info">
+                    <h3>Choco Heaven</h3>
+                    <p>Triple chocolate fudge with brownie bites.</p>
+                    <div class="price-action">
+                        <span class="price">₹300</span>
+                        <button class="add-to-cart" data-name="Choco Heaven">+</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="specials" class="section highlight-bg reveal">
+        <div class="special-content">
+            <h2>🎉 Flavor of the Month</h2>
+            <h3>Honey Lavender Dream</h3>
+            <p>A soft floral note paired with local organic honey. It's calm, sweet, and perfectly purple.</p>
+            <button class="btn-secondary add-to-cart" data-name="Honey Lavender">Add to Cart</button>
+        </div>
+        <div class="special-image">
+            <img src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?auto=format&fit=crop&w=600&q=80" alt="Special Ice Cream">
+        </div>
+    </section>
+
+    <section id="about" class="section reveal">
+        <div class="about-container">
+            <h2>Our Story</h2>
+            <p>Started in a small kitchen with a big dream, <strong>Sweet Tooth</strong> is dedicated to bringing color and joy to your day. We use only organic milk, real fruit, and zero artificial preservatives. Every scoop is a smile waiting to happen!</p>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <h3>Sweet Tooth 🍦</h3>
+            <p>Shop No. 12, Gokhale Road, Pune</p>
+            <div class="socials">
+                <span>Instagram</span> | <span>Twitter</span> | <span>Facebook</span>
+            </div>
+            <p class="copyright">&copy; 2024 Sweet Tooth. Made with 💗.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
