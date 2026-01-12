@@ -40,4 +40,22 @@ Create a responsive landing page with:
 
 ---
 
-## 📂 Project Structure
+
+---
+
+## ▶️ How to Run
+1. Download or clone this repository
+2. Open `index.html` in any modern web browser
+3. Scroll and interact with the navigation menu 🍨
+
+---
+
+## 📸 Preview
+> https://harmonious-dodol-7de71f.netlify.app/
+
+---
+
+## 👩‍💻 Author
+**Madhura Patil**  
+Web Development Intern
+
