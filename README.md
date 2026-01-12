@@ -1,28 +1,43 @@
-Responsive Landing Page – Task 01
+# 🍦 Sweet Tooth – Responsive Landing Page
 
-A responsive landing page developed as part of an internship task, featuring a fixed navigation menu with interactive hover effects and style changes on scroll.
+A colorful and responsive **landing page** designed for a bakery & ice cream brand called **Sweet Tooth**.  
+This project was developed as **Task 01** of my **Web Development Internship**.
 
+The main focus of this task was to create an **interactive fixed navigation menu** that responds to user actions like scrolling and hovering.
 
-Features
+---
 
-Fixed and interactive navigation bar
+## 🎯 Task Objective
+Create a responsive landing page with:
+- An interactive navigation menu
+- Navigation style changes on scroll and hover
+- Fixed navigation bar visible on all sections/pages
 
-Hover effects on menu items
+---
 
-Navbar style change on scroll
+## ✨ Key Features
+- 📌 **Fixed Navigation Bar** visible across the entire page
+- 🎨 **Interactive hover effects** on navigation links
+- 🔄 **Scroll-based navbar style change** (background, color, shadow)
+- 🍦 Colorful and aesthetic UI inspired by bakery & ice cream brands
+- 🎞️ Scroll reveal animations for sections
+- 🛒 Basic cart interaction with live item count
+- 📱 Fully responsive design for mobile and desktop
 
-Fully responsive design
+---
 
+## 🧭 Navigation Interactions
+- Navbar changes background, height, and colors on scroll
+- Hover underline animation on menu items
+- Cart button with animated badge and hover effect
 
-Tech Stack
+---
 
-HTML
+## 🛠️ Technologies Used
+- **HTML5** – Semantic structure
+- **CSS3** – Flexbox, animations, gradients, responsive design
+- **JavaScript** – Scroll detection, animations, cart interaction
 
-CSS
+---
 
-JavaScript
-
-
-How to Run
-
-Open index.html in any modern web browser.
+## 📂 Project Structure
