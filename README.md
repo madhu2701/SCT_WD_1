@@ -51,7 +51,7 @@ Create a responsive landing page with:
 ---
 
 ## 📸 Preview
-> https://harmonious-dodol-7de71f.netlify.app/
+> https://task-01-sweet-tooth.netlify.app/
 
 ---
 
